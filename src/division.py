@@ -1,5 +1,8 @@
-def evaluar(dividendo, divisor):
-    if dividendo % divisor == 0: 
+def evaluar(dividendo, divisor): 
+    if divisor == 0: 
+        respuesta = "La división no es válida." 
+        return respuesta 
+    elif dividendo % divisor == 0: 
         cociente = dividendo // divisor
         residuo = dividendo % divisor
         respuesta = "La división es exacta. \n" \
@@ -9,7 +12,7 @@ def evaluar(dividendo, divisor):
     else: 
         cociente = dividendo // divisor 
         residuo = dividendo % divisor 
-        respuesta = "La división es exacta. \n" \
+        respuesta = "La división no es exacta. \n" \
                 "Cociente: " + str(cociente) + "\n" \
                 "Residuo: " + str(residuo)
         return respuesta
